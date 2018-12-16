@@ -1,0 +1,38 @@
+{
+  "teachers": [
+    {
+      "id": 1,
+      "name": "feyman"
+    },
+    {
+      "id": 2,
+      "name": "richard"
+    }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "name": "english"
+    },
+    {
+      "id": 2,
+      "name": "machine learning"
+    }
+  ],
+  "schedules": [
+    {
+      "id": 1,
+      "course": 1,
+      "teacher": 1,
+      "startDatetime": "2018-04-04T09:00:00.000Z",
+      "endDatetime": "2018-04-04T10:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "course": 2,
+      "teacher": 2,
+      "startDatetime": "2018-04-04T14:00:00.000Z",
+      "endDatetime": "2018-04-04T15:00:00.000Z"
+    }
+  ]
+}
