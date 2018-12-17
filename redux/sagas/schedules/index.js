@@ -11,6 +11,7 @@ import {
   fetchSchedules,
   createSchedule,
 } from '@/services/api/schedules';
+import { formatSchedule } from '@/models/schedule';
 
 export function* watchFetchSchedulesRequest() {
   yield takeEvery(FETCH_SCHEDULES_REQUEST, fetchSchedulesRequestWorker);
@@ -18,7 +19,8 @@ export function* watchFetchSchedulesRequest() {
 
 export function* fetchSchedulesRequestWorker(action) {
   try {
-    const schedules = yield call(fetchSchedules, action.payload);
+    let schedules = yield call(fetchSchedules, action.payload);
+    schedules.forEach(schedule => formatSchedule(schedule));
     yield put(fetchSchedulesSuccess({schedules}));
   } catch(error) {
     yield put(fetchSchedulesFailure(error));

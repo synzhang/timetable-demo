@@ -12,4 +12,11 @@ class Schedule extends Model {
   }
 };
 
+export const formatSchedule = (data) => {
+  data.startDatetime = new Date(data.startDatetime);
+  data.endDatetime = new Date(data.endDatetime);
+
+  return data;
+}
+
 export default Schedule;
