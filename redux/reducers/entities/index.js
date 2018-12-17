@@ -6,7 +6,7 @@ import orm from '@/models/orm';
 
 const emptyState = orm.getEmptyState();
 
-const models = (state = emptyState, action) => {
+const entities = (state = emptyState, action) => {
   switch (get(action, 'meta.model')) {
     case 'teacher':
       return teachers(state, action);
@@ -19,4 +19,4 @@ const models = (state = emptyState, action) => {
   };
 };
 
-export default models;
+export default entities;
