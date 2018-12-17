@@ -1,11 +1,13 @@
 import React from 'react';
-import configureStore from '@/redux/store';
-import App from '@/components/App';
 
-const store = configureStore()
+class Index extends React.Component {
+  render() {
+    return (
+      <div>
+        Hello, world.
+      </div>
+    );
+  }
+};
 
-const Root = () => (
-  <App store={store} />
-);
-
-export default Root;
+export default Index;
