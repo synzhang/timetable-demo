@@ -6,6 +6,10 @@
       "alias": {
         "@": "./",
       }
+    }],
+    ["import", {
+      "libraryName": "antd",
+      "style": "css"
     }]
   ]
 }

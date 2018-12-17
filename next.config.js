@@ -1,8 +1,13 @@
 require('dotenv').config();
 
 const webpack = require('webpack');
+const withCss = require('@zeit/next-css');
 
-module.exports = {
+if (typeof require !== 'undefined') {
+  require.extensions['.css'] = (file) => {}
+};
+
+module.exports = withCss({
   webpack: (config) => {
     config.plugins.push(
       new webpack.EnvironmentPlugin(process.env)
@@ -15,4 +20,4 @@ module.exports = {
   publicRuntimeConfig: {
     apiUrlBase: process.env.API_URL_BASE
   },
-};
+});
