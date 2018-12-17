@@ -2,21 +2,21 @@
   "teachers": [
     {
       "id": 1,
-      "name": "feyman"
+      "name": "Feyman"
     },
     {
       "id": 2,
-      "name": "richard"
+      "name": "Richard"
     }
   ],
   "courses": [
     {
       "id": 1,
-      "name": "english"
+      "name": "English"
     },
     {
       "id": 2,
-      "name": "machine learning"
+      "name": "Machine Learning"
     }
   ],
   "schedules": [
@@ -33,6 +33,27 @@
       "teacher": 2,
       "startDatetime": "2018-04-04T14:00:00.000Z",
       "endDatetime": "2018-04-04T15:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "course": 1,
+      "teacher": 1,
+      "startDatetime": "2018-12-04T09:00:00.000Z",
+      "endDatetime": "2018-12-04T10:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "course": 2,
+      "teacher": 2,
+      "startDatetime": "2018-12-04T14:00:00.000Z",
+      "endDatetime": "2018-12-04T15:00:00.000Z"
+    },
+    {
+      "id": 5,
+      "course": 2,
+      "teacher": 2,
+      "startDatetime": "2018-12-24T14:00:00.000Z",
+      "endDatetime": "2018-12-24T15:00:00.000Z"
     }
   ]
 }
