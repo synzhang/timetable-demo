@@ -18,3 +18,13 @@ export const createSchedule = (data) => {
   return fetch(schedulesUrl, requestOptions)
     .then(response => response.json())
 };
+
+export const updateSchedule = (data) => {
+  let requestOptions = merge({}, defaultRequestOptions, {
+    method: 'PATCH',
+    body: JSON.stringify(data),
+  });
+
+  return fetch(schedulesUrl, requestOptions)
+    .then(response => response.json())
+};

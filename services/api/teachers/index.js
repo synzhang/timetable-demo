@@ -18,3 +18,13 @@ export const createTeacher = (data) => {
   return fetch(teachersUrl, requestOptions)
     .then(response => response.json())
 };
+
+export const updateTeacher = (data) => {
+  let requestOptions = merge({}, defaultRequestOptions, {
+    method: 'PATCH',
+    body: JSON.stringify(data),
+  });
+
+  return fetch(teachersUrl, requestOptions)
+    .then(response => response.json())
+};
